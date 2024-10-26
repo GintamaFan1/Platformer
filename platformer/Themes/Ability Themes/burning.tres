@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c63y1fc1fnp0a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwi2r"]
+bg_color = Color(0.995021, 0.354147, 0.239084, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.648587, 0.210227, 1)
+border_blend = true
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_wwi2r")
+Button/styles/focus = SubResource("StyleBoxFlat_wwi2r")
+Button/styles/hover = SubResource("StyleBoxFlat_wwi2r")
+Button/styles/normal = SubResource("StyleBoxFlat_wwi2r")
+Button/styles/pressed = SubResource("StyleBoxFlat_wwi2r")

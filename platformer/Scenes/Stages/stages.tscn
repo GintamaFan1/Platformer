@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdogfthi2b310"]
+
+[ext_resource type="Script" path="res://Scenes/Stages/parent_stage.gd" id="1_7gpyx"]
+[ext_resource type="PackedScene" uid="uid://dij08rycai6j2" path="res://Scenes/Basics/grid.tscn" id="2_o1sn1"]
+[ext_resource type="PackedScene" uid="uid://dik20b2oxropt" path="res://Scenes/UI/round_end_panel.tscn" id="3_mnqj2"]
+
+[node name="Stages" type="Node" groups=["stages"]]
+script = ExtResource("1_7gpyx")
+grid_scene = ExtResource("2_o1sn1")
+round_end_scene = ExtResource("3_mnqj2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -27.0
+offset_right = 100.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GridHolder" type="Control" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ChoiceTimer" type="Timer" parent="." groups=["choice timer"]]
+unique_name_in_owner = true
+one_shot = true

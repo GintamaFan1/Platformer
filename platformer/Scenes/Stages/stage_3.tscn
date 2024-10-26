@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ws2ddkdkplud"]
+
+[ext_resource type="PackedScene" uid="uid://bdogfthi2b310" path="res://Scenes/Stages/stages.tscn" id="1_jspba"]
+[ext_resource type="Script" path="res://Scenes/Stages/stage_3.gd" id="2_kpfc4"]
+
+[node name="Stage3" instance=ExtResource("1_jspba")]
+script = ExtResource("2_kpfc4")

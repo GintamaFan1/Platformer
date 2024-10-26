@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://mefcksx000gk"]
+
+[ext_resource type="Script" path="res://Scenes/UI/main_ui.gd" id="1_85la3"]
+[ext_resource type="PackedScene" uid="uid://buo76rnivyc12" path="res://Scenes/UI/start_menu.tscn" id="2_vmfly"]
+[ext_resource type="PackedScene" uid="uid://mtly3oodu8bk" path="res://Scenes/UI/confirm_ready_panel.tscn" id="3_nq5j4"]
+
+[node name="MainUi" type="Node" groups=["ui"]]
+script = ExtResource("1_85la3")
+
+[node name="MainLayer" type="CanvasLayer" parent="."]
+
+[node name="StageHolder" type="Control" parent="MainLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartMenu" parent="MainLayer" instance=ExtResource("2_vmfly")]
+unique_name_in_owner = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MainLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StageNameLabel" type="Label" parent="MainLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TImerLabel" type="Label" parent="MainLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RoundLabel" type="Label" parent="MainLayer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SideLayer1" type="CanvasLayer" parent="."]
+
+[node name="ConfirmReadyPanel" parent="SideLayer1" instance=ExtResource("3_nq5j4")]
+visible = false
+
+[node name="SideLayer2" type="CanvasLayer" parent="."]
+
+[connection signal="stage_selected" from="MainLayer/StartMenu" to="." method="_on_start_menu_stage_selected"]

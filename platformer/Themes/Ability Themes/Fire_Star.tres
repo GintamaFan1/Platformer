@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bbfp847e8nc38"]
+
+[ext_resource type="Texture2D" uid="uid://bv33vl2a5w2ha" path="res://Pixel_Pen/Star TIle.png" id="1_ir1y6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ea3w"]
+bg_color = Color(0.790286, 0.534809, 0.330778, 1)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0.343654, 0.707258, 0.931172, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 18
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.0392157, 0.0392157, 0.0392157, 0.972549)
+shadow_offset = Vector2(2, 0)
+
+[resource]
+Button/icons/icon = ExtResource("1_ir1y6")
+Button/styles/focus = SubResource("StyleBoxFlat_8ea3w")
+Button/styles/hover = SubResource("StyleBoxFlat_8ea3w")
+Button/styles/normal = SubResource("StyleBoxFlat_8ea3w")
+Button/styles/pressed = SubResource("StyleBoxFlat_8ea3w")

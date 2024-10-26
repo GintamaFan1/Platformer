@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://sgtylciv54s2"]
+
+[ext_resource type="Texture2D" uid="uid://ywcr1qmm4aw6" path="res://Pixel_Pen/broken tile.png" id="1_nfkr3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3jv7"]
+bg_color = Color(0.696972, 0.745827, 0.895785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[resource]
+Button/icons/icon = ExtResource("1_nfkr3")
+Button/styles/disabled = SubResource("StyleBoxFlat_o3jv7")
+Button/styles/focus = SubResource("StyleBoxFlat_o3jv7")
+Button/styles/hover = SubResource("StyleBoxFlat_o3jv7")
+Button/styles/normal = SubResource("StyleBoxFlat_o3jv7")
+Button/styles/pressed = SubResource("StyleBoxFlat_o3jv7")
